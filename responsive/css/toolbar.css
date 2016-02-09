@@ -64,7 +64,7 @@
 }
 
 .toolbar .menu .left-box .item:hover{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 .toolbar .menu .left-box .checked{
@@ -159,10 +159,13 @@
         box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
     }
 
+    .toolbar .menu .left-box .checked{
+        background-color:#DEDEDE;
+    }
+
     .toolbar .menu .left-box .item {
         display: block;
         line-height: 43px;
-        background-color: white;
         color: black;
         border-bottom: 1px solid #DACFCF;
         text-align: left;
