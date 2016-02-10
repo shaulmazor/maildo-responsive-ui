@@ -1,0 +1,102 @@
+/*----- compose-area ----------------*/
+
+.compose-area{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 575px;
+    width: 600px;
+    z-index: 5;
+    display:none;
+}
+
+.compose-area .compose-view{
+    width:100%;
+    height:100%;
+    display:table;
+    table-layout: fixed;
+}
+
+.compose-area .compose-view .compose-view-header{
+    background-color: #333232;
+    height:45px;
+}
+
+.compose-area .compose-view .compose-view-header .compose-view-send{
+    position:relative;
+}
+
+.compose-area .compose-view .compose-view-header .compose-view-send:after{
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 48px;
+    height: 48px;
+    background: url("../images/sprite.png") no-repeat -80px -115px;
+}
+
+.compose-area .compose-view .compose-view-header .compose-view-close{
+    position:relative;
+}
+
+.compose-area .compose-view .compose-view-header .compose-view-close:after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    width: 20px;
+    height: 27px;
+    background: url("../images/sprite.png") no-repeat -20px -70px;
+}
+
+.compose-area .compose-view .row{
+    width: 100%;
+    display:table-row;
+    height: 35px;
+}
+
+.compose-area .compose-view .fromField,
+.compose-area .compose-view .toField,
+.compose-area .compose-view .subject {
+    height: 35px;
+    width:100%;
+    border:1px solid #eee4e4;
+    outline:0;
+    padding: 0 0 0 5px;
+    font-size:13px;
+}
+
+.compose-area .compose-view .content {
+    width: 100%;
+    height: 100%;
+    outline:0;
+    padding:0px;
+    border:1px solid #eee4e4;
+}
+
+.compose-area .compose-view .row.flexible {
+    height: auto;
+}
+
+.compose-area.show{
+    display:table;
+}
+
+
+/*==============================================================*/
+
+
+@media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+
+    .compose-area {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: 5;
+        display: none;
+        height: 100%;
+        width: 100%;
+    }
+}

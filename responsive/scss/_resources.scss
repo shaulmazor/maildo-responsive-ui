@@ -1,0 +1,102 @@
+/*------- taken from http://codepen.io/oknoblich/pen/tKfab ---------*/
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+.resources-wrapper{
+    width:330px;
+}
+.resources{
+    position: relative;
+    background-color: white;
+    font-family: 'Lato';
+    padding-top:10px;
+    padding-bottom:5px;
+}
+
+.resources * {
+    margin: 0;
+    padding: 0;
+}
+
+.resources *, .resources *:before, .resources *:after {
+    box-sizing: border-box;
+}
+
+.resources .togglebox {
+    margin: 0 auto;
+    background: #fff;
+    transform: translateZ(0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    font: 15px/1 'Open Sans', sans-serif;
+    color: #555;
+}
+
+.resources input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.resources label {
+    position: relative;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+.resources label[for*='1'] {
+    border: 0;
+}
+
+.resources label:after {
+    content: '\f078';
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-family: fontawesome;
+    transform: rotate(90deg);
+    transition: .3s transform;
+}
+
+.resources section {
+    height: 0;
+    transition: .3s all;
+    overflow: hidden;
+}
+
+.resources #toggle1:checked ~ .resources label[for*='1']:after,
+.resources #toggle2:checked ~ .resources label[for*='2']:after,
+.resources #toggle3:checked ~ .resources label[for*='3']:after,
+.resources #toggle4:checked ~ .resources label[for*='4']:after {
+    transform: rotate(0deg);
+}
+
+.resources #toggle1:checked ~ #content1,
+.resources #toggle2:checked ~ #content2,
+.resources #toggle3:checked ~ #content3,
+.resources #toggle4:checked ~ #content4 {
+    height: 220px;
+}
+
+.resources p {
+    margin: 15px 0;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/*==============================================================*/
+
+@media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+
+    .resources-wrapper{
+        width:100%;
+    }
+
+}

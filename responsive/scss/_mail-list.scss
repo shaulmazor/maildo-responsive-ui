@@ -1,0 +1,175 @@
+#md{
+
+    .mail-list{
+        width: 1140px;
+        margin: 0 auto;
+        position: absolute;
+        top: 300px;
+        bottom: 0px;
+        overflow: auto;
+        margin-left: -570px;
+        left: 50%;
+
+        .mail {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            border-top:1px solid #C7C3C3;
+            color:#504F4F;
+
+            .row {
+                display: table-row;
+                line-height: 60px;
+            }
+
+            .select-column{
+                display: table-cell;
+                width: 54px;
+                text-align: left;
+                position:relative;
+            }
+
+            .chkbox-select{
+
+                position:absolute;
+                top: 22px;
+                left: 1px;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                background-image: url("../images/sprite.png");
+                background-size: 400px 400px;
+                background-position: -54px -119px;
+                cursor: pointer;
+                -webkit-user-select: none;
+
+                &.checked{
+                    background-position: -54px -139px
+                }
+            }
+
+            .content {
+                display: table-cell;
+                font-size: 16px;
+
+                .ellipsis{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                    white-space: nowrap;
+                    line-height:24px;
+                }
+
+                .space{
+                    padding-bottom: 6px;
+                }
+
+                .bold{
+                    font-weight: bold;
+                }
+            }
+
+            .info{
+                display: table-cell;
+                width: 70px;
+                text-align: right;
+
+                .star{
+                    position:relative;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0px;
+                        right: 8px;
+                        width: 24px;
+                        height: 24px;
+                        background: url("../images/sprite.png") no-repeat -22px -169px;
+                    }
+                }
+
+                .no-star{
+                    position:relative;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0px;
+                        right: 8px;
+                        width: 24px;
+                        height: 24px;
+                        background: url("../images/sprite.png") no-repeat 0px -169px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.mail-viewer-mode .mail-list{
+        display: none;
+    }
+}
+
+/*==============================================================*/
+
+@media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+
+    #md{
+        .mail-list {
+            width: 100%;
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            margin-left: 0px;
+
+            .mail{
+                .row {
+                    line-height: 36px;
+                }
+                .select-column {
+                    width: 45px;
+
+                    .chkbox-select {
+                        top: 31px;
+                        left: 12px;
+                        width: 15px;
+                        height: 15px;
+                        background-position: -6px -139px;
+
+                        &.checked {
+                            background-position: -6px -124px;
+                        }
+                    }
+                }
+                .info {
+                    padding-right: 20px;
+                }
+                .content {
+                    font-size: 15px;
+
+                    .ellipsis {
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*==============================================================*/
+
+@media screen and (min-device-width: 801px) and (max-device-width: 1200px), screen and (min-width: 801px) and (max-width: 1200px){
+
+    #md {
+        .mail-list {
+            width: 700px;
+            margin-left: -350px;
+        }
+    }
+}
+

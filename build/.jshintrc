@@ -1,0 +1,26 @@
+{
+    "undef": true,
+    "eqnull": true,
+    "noarg": true,
+    "browser": true,
+    "evil": true,
+    "laxcomma": true,
+    "es3": true,
+    "curly":true,
+    "unused":false,
+    "noarg":true,
+    "nonew":false,
+    "browser":true,
+    "evil":true,
+    "laxcomma":true,
+    "debug":true,
+    "devel":false,
+    "-W100": true,
+    "globals": {
+        "lpTag": true,
+        "NodeList": true,
+        "HTMLCollection": true,
+        "console": true,
+        "JSON": true
+    }
+ }
