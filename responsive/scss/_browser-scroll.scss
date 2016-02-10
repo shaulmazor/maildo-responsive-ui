@@ -1,19 +1,18 @@
 .browser-scroll {
-}
 
-.browser-scroll::-webkit-scrollbar {
-    width: 0px
-}
+    &::-webkit-scrollbar {
+        width: 0px
+    }
 
-.browser-scroll.light::-webkit-scrollbar {
-    width: 0px
-}
+    &.light::-webkit-scrollbar {
+        width: 0px
+    }
 
-.browser-scroll.scroll-fixed::-webkit-scrollbar {
-    width: 0px;
-}
+    &.scroll-fixed::-webkit-scrollbar {
+        width: 0px;
+    }
 
-.browser-scroll.scroll-fixed::-webkit-scrollbar-track, .browser-scroll.scroll-fixed::-webkit-scrollbar-thumb {
-    width: 0px;
+    &.scroll-fixed::-webkit-scrollbar-track, &.scroll-fixed::-webkit-scrollbar-thumb {
+        width: 0px;
+    }
 }
-

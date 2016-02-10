@@ -1,54 +1,59 @@
-.dialog .infobox-wrapper {
-    top: 85px;
-    right: 20px;
-}
+#md {
 
-.dialog .infobox-wrapper:after, .dialog .infobox-wrapper:before {
-   left:246px;
-}
+    .dialog .infobox-wrapper {
+        top: 85px;
+        right: 20px;
+    }
 
-.infobox .profile-panel{
-    display: table;
-    width: 300px;
-    table-layout: fixed;
-    border-bottom:1px solid #a6a6a6;
-}
+    .dialog .infobox-wrapper:after, .dialog .infobox-wrapper:before {
+        left:246px;
+    }
 
-.infobox .profile-panel .profile-image{
-    width: 116px;
-    height: 111px;
-    background: url("../images/sprite.png") no-repeat -162px -27px;
-    display: table-cell;
-}
+    .infobox{
 
-.infobox .profile-panel .profile-titles{
-    display:table-cell;
-    vertical-align: middle;
-}
+        .profile-panel{
+            display: table;
+            width: 300px;
+            table-layout: fixed;
+            border-bottom:1px solid #a6a6a6;
 
-.infobox .profile-panel .profile-titles .profile-main-title{
-    line-height:20px;
-    font-size:15px;
-}
+            .profile-image{
+                width: 116px;
+                height: 111px;
+                background: url("../images/sprite.png") no-repeat -162px -27px;
+                display: table-cell;
+            }
 
-.infobox .profile-panel .profile-titles .profile-sub-title{
-    line-height:20px;
-    font-size:13px;
-    color:#0079FF;
-}
+            .profile-titles{
+                display:table-cell;
+                vertical-align: middle;
 
-.infobox .resources-link{
-    padding: 14px 14px 14px 20px;
-}
+                .profile-main-title{
+                    line-height:20px;
+                    font-size:15px;
+                }
 
-.infobox .resources-link:before{
-    content: "+";
-    font-size: 1.5em;
-    line-height: 0.5em;
-    float: left;
-    margin-right:12px;
-    margin-top:3px;
-    color:#0079FF;
+                .profile-sub-title{
+                    line-height:20px;
+                    font-size:13px;
+                    color:#0079FF;
+                }
+            }
+        }
+
+        .resources-link{
+            padding: 14px 14px 14px 20px;
+            &:before{
+                content: "+";
+                font-size: 1.5em;
+                line-height: 0.5em;
+                float: left;
+                margin-right:12px;
+                margin-top:3px;
+                color:#0079FF;
+            }
+        }
+    }
 }
 
 /*==============================================================*/
