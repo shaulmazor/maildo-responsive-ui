@@ -1,48 +1,55 @@
+#md {
 
-.dialog .settings-wrapper {
-    top: 85px;
-    right: 20px;
-}
+    .dialog {
+        .settings-wrapper {
+            top: 85px;
+            right: 20px;
 
-.dialog .settings-wrapper:after, .dialog .settings-wrapper:before {
-    left:190px;
-}
-.settings .title{
-    font-size:14px;
-    color:black;
-    padding:5px 5px 5px 5px;
-}
+            &:after, &:before {
+                left: 190px;
+            }
+        }
+    }
 
-.settings .content{
-    font-size:12px;
-    color:gray;
-    padding:5px 5px 5px 7px;
-    width:280px;
-}
+    .settings{
+        .title{
+            font-size:14px;
+            color:black;
+            padding:5px 5px 5px 5px;
+        }
+        .content{
+            font-size:12px;
+            color:gray;
+            padding:5px 5px 5px 7px;
+            width:280px;
+        }
+        .panel{
+            padding: 5px 0 0 10px;
+        }
 
-.settings .panel{
-    padding: 5px 0 0 10px;
+        .split{
+            border-top: 1px solid lightgray;
+            width: 100%;
+            margin:5px 0 5px 0;
+        }
+    }
 }
-
-.settings .split{
-    border-top: 1px solid lightgray;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 
 
 /*==============================================================*/
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    .dialog .settings-wrapper {
-        top: 0px;
-        right: 0px;
-    }
+    #md {
+        .dialog {
+            .settings-wrapper {
+                top: 0;
+                right: 0;
+            }
+        }
+        .settings {
+            width: 100%;
 
-    .settings {
-        width: 100%;
+        }
     }
 }
