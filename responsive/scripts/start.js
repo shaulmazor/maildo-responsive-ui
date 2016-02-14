@@ -23,7 +23,7 @@ function loadTemplates(callback){
             domEntry: ".innerContainer"
         },
         {
-            path:"./templates/compose-area.tmpl",
+            path:"./templates/compose.tmpl",
             domEntry: ".innerContainer"
         },
         {
