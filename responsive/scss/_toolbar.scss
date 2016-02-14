@@ -136,15 +136,6 @@
                 -moz-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
                 box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
 
-                .moduleItems {
-                    float: none;
-                    width: 100%;
-                    position: absolute;
-                    top: 40px;
-                    margin: 0px;
-                    padding: 0px;
-                }
-
                 .left-box {
                     width: 100%;
                     position: absolute;
@@ -196,11 +187,31 @@
                         }
                     }
                 }
+
+                &.menuPosition{
+                    left: -212px;
+                }
+
+                &.open-nav{
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                    left: 0;
+                }
+
+                &.close-nav {
+                    left: -210px;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                }
             }
 
-            .menuPosition {
-                left: -210px;
-            }
+
 
             .btn-find-wrapper {
                 position: absolute;

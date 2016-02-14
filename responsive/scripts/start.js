@@ -58,18 +58,19 @@ function setDomEvents() {
     var dialog = new Dialog();
 
     $(".btn-show-menu").bind( "click", function() {
-        if($(".menuPosition").hasClass("open-nav")){
-            $(".menuPosition").removeClass("open-nav");
-            $(".menuPosition").addClass("close-nav");
+
+        if($(".menu").hasClass("open-nav")){
+            $(".menu").removeClass("open-nav");
+            $(".menu").addClass("close-nav");
         }else{
-            $(".menuPosition").removeClass("close-nav");
-            $(".menuPosition").addClass("open-nav");
+            $(".menu").removeClass("close-nav");
+            $(".menu").addClass("open-nav");
 
             setTimeout(function(){
-                $(".menuPosition").bind( "clickoutside", function() {
-                    $(".menuPosition").unbind();
-                    $(".menuPosition").removeClass("open-nav");
-                    $(".menuPosition").addClass("close-nav");
+                $(".menu").bind( "clickoutside", function() {
+                    $(".menu").unbind();
+                    $(".menu").removeClass("open-nav");
+                    $(".menu").addClass("close-nav");
                 });
             },50);
         }
