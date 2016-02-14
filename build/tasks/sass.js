@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
         "all": {
             "files": {
-                "responsive/scss_output/initial.css": "responsive/scss/initial.scss"
+                "responsive/css/initial.css": "responsive/scss/initial.scss"
             },
             "options": {
                 "includePaths": [
