@@ -46,6 +46,10 @@
         .menu{
             display:table-cell;
 
+            &.menuPosition{
+                position: static;
+            }
+
             .left-box{
                 float:left;
                 display:table;
@@ -102,10 +106,7 @@
                     }
                 }
             }
-        }
 
-        .menuPosition{
-            position: static;
         }
     }
 }
@@ -125,16 +126,38 @@
             }
 
             .menu {
-                position: fixed;
-                top: 0px;
-                bottom: 0px;
-                left: 0px;
                 background-color: white;
                 width: 200px;
                 z-index: 1;
                 -webkit-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
                 -moz-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
                 box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
+
+                &.menuPosition{
+                    position: fixed;
+                    top: 0px;
+                    bottom: 0px;
+                    left: -212px;
+                }
+
+                &.open-nav{
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                    left: 0;
+                }
+
+                &.close-nav {
+                    left: -210px;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                    left: -212px;
+                }
 
                 .left-box {
                     width: 100%;
@@ -186,28 +209,6 @@
                             left: 10px;
                         }
                     }
-                }
-
-                &.menuPosition{
-                    left: -212px;
-                }
-
-                &.open-nav{
-                    -webkit-transition: all 1s ease;
-                    -moz-transition: all 1s ease;
-                    -o-transition: all 1s ease;
-                    -ms-transition: all 1s ease;
-                    transition: all 1s ease;
-                    left: 0;
-                }
-
-                &.close-nav {
-                    left: -210px;
-                    -webkit-transition: all 1s ease;
-                    -moz-transition: all 1s ease;
-                    -o-transition: all 1s ease;
-                    -ms-transition: all 1s ease;
-                    transition: all 1s ease;
                 }
             }
 
