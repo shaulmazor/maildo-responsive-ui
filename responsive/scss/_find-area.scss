@@ -1,4 +1,4 @@
-#md {
+.md {
     .find-area{
         width: 100%;
         height: 42px;
@@ -40,7 +40,7 @@
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    #md {
+    .md {
         .find-area {
             display: none;
             width: 100%;

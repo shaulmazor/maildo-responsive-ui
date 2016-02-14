@@ -1,5 +1,4 @@
-#md{
-
+.md{
     .mail-list{
         width: 1140px;
         margin: 0 auto;
@@ -118,7 +117,7 @@
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    #md{
+    .md{
         .mail-list {
             width: 100%;
             position: absolute;
@@ -165,7 +164,7 @@
 
 @media screen and (min-device-width: 801px) and (max-device-width: 1200px), screen and (min-width: 801px) and (max-width: 1200px){
 
-    #md {
+    .md {
         .mail-list {
             width: 700px;
             margin-left: -350px;

@@ -1,4 +1,4 @@
-#md {
+.md {
     .compose-area {
         position: absolute;
         bottom: 5px;
@@ -87,7 +87,7 @@
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    #md {
+    .md {
         .compose-area {
             position: absolute;
             top: 0px;

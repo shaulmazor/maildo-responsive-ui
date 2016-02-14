@@ -1,4 +1,4 @@
-#md {
+.md {
 
     .dialog {
         .folder-list-wrapper {
@@ -37,7 +37,7 @@
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    #md {
+    .md {
         .dialog {
             .folder-list-wrapper {
                 position:fixed;

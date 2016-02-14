@@ -1,4 +1,4 @@
-#md {
+.md {
 
     .dialog .infobox-wrapper {
         top: 85px;
@@ -60,13 +60,15 @@
 
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
 
-    .dialog .infobox-wrapper {
-        top: 0px;
-        right: 0px;
-    }
+    .md {
+        .dialog .infobox-wrapper {
+            top: 0px;
+            right: 0px;
+        }
 
-    .infobox .profile-panel{
-        width:100%;
+        .infobox .profile-panel{
+            width:100%;
+        }
     }
 }
 
