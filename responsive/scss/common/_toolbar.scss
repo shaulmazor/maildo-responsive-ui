@@ -7,7 +7,7 @@
         height:60px;
         table-layout: fixed;
         position:fixed;
-        top:0px;
+        top:0;
         z-index:5;
         background-color: #55688A;
 
@@ -55,7 +55,7 @@
                 display:table;
                 margin: 0;
                 height: 60px;
-                padding: 0px;
+                padding: 0;
 
                 .item{
                     color:white;
@@ -119,7 +119,7 @@
 
         .toolbar {
             height: 50px;
-            top: 0px;
+            top: 0;
 
             .btn-show-menu {
                 display: table-cell;
@@ -135,8 +135,8 @@
 
                 &.menuPosition{
                     position: fixed;
-                    top: 0px;
-                    bottom: 0px;
+                    top: 0;
+                    bottom: 0;
                     left: -212px;
                 }
 
@@ -163,8 +163,8 @@
                     width: 100%;
                     position: absolute;
                     top: 50px;
-                    margin: 0px;
-                    padding: 0px;
+                    margin: 0;
+                    padding: 0;
                     -webkit-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
                     -moz-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
                     box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
@@ -187,9 +187,9 @@
                     background-color: black;
                     width: 100%;
                     position: absolute;
-                    top: 0px;
-                    margin: 0px;
-                    padding: 0px;
+                    top: 0;
+                    margin: 0;
+                    padding: 0;
 
                     .item {
                         height: 50px;
@@ -212,11 +212,9 @@
                 }
             }
 
-
-
             .btn-find-wrapper {
                 position: absolute;
-                left: 0px;
+                left: 0;
                 top: -5px;
             }
         }

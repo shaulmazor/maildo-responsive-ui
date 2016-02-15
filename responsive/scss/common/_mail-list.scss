@@ -4,7 +4,7 @@
         margin: 0 auto;
         position: absolute;
         top: 300px;
-        bottom: 0px;
+        bottom: 0;
         overflow: auto;
         margin-left: -570px;
         left: 50%;
@@ -82,7 +82,7 @@
                     &:after{
                         content: "";
                         position: absolute;
-                        top: 0px;
+                        top: 0;
                         right: 8px;
                         width: 24px;
                         height: 24px;
@@ -96,7 +96,7 @@
                     &:after{
                         content: "";
                         position: absolute;
-                        top: 0px;
+                        top: 0;
                         right: 8px;
                         width: 24px;
                         height: 24px;
@@ -122,8 +122,8 @@
             width: 100%;
             position: absolute;
             top: 120px;
-            left: 0px;
-            margin-left: 0px;
+            left: 0;
+            margin-left: 0;
 
             .mail{
                 .row {

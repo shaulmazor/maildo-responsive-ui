@@ -6,7 +6,7 @@
         margin: 0 auto;
         position: absolute;
         top: 300px;
-        bottom: 0px;
+        bottom: 0;
         overflow: auto;
         margin-left: -570px;
         left: 50%;
@@ -131,10 +131,10 @@
             }
 
             .mail-viewer-content {
-                border: 0px;
+                border: 0;
                 margin-right: 30px;
                 margin-top: 25px;
-                margin-left: 0px;
+                margin-left: 0;
                 text-align: center;
 
                 .box {
