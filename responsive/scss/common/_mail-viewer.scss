@@ -13,7 +13,7 @@
         border-top: 1px solid gray;
         padding-top: 30px;
 
-        .mail-viewer-header {
+        &__header {
             display: table;
             table-layout: fixed;
             width: 100%;
@@ -73,9 +73,10 @@
             }
         }
 
-        .mail-viewer-content{
+        &__content{
             margin:50px;
             text-align: center;
+            background-color: white;
 
             .box{
                 width: 495px;
@@ -113,7 +114,7 @@
 
         .mail-viewer {
 
-            .mail-viewer-header {
+            &__header {
                 width:90%;
 
                 .mail-details-wrapper{
@@ -130,7 +131,7 @@
                 }
             }
 
-            .mail-viewer-content {
+            &__content {
                 border: 0;
                 margin-right: 30px;
                 margin-top: 25px;
