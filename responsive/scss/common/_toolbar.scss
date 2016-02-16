@@ -9,7 +9,7 @@
         position:fixed;
         top:0;
         z-index:5;
-        background-color: #55688A;
+        background-color: $toolbarBackground;
 
         .btn-find-wrapper{
             width: 45px;
@@ -23,7 +23,7 @@
                 right: 9px;
                 width: 24px;
                 height: 24px;
-                background: url("../images/sprite.png") no-repeat -82px 0;
+                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -82px 0;
             }
         }
 
@@ -38,7 +38,7 @@
                 width: 20px;
                 margin: 10px 0 0;
                 height: 20px;
-                background: url("../images/sprite.png") no-repeat -113px 0;
+                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -113px 0;
                 margin: 0 auto;
             }
         }
@@ -90,7 +90,7 @@
                         left: 21px;
                         width: 24px;
                         height: 24px;
-                        background: url("../images/sprite.png") no-repeat -46px 0;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -46px 0;
                     }
                 }
 
@@ -102,7 +102,7 @@
                         left: 13px;
                         width: 39px;
                         height: 31px;
-                        background: url("../images/sprite.png") no-repeat -126px -48px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -126px -48px;
                     }
                 }
             }

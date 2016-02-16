@@ -5,46 +5,39 @@
 
 function loadTemplates(callback){
 
-    var templatesArr = [
-        {
-            path:"./templates/toolbar.tmpl",
-            domEntry: ".innerContainer"
-        },
-        {
-            path:"./templates/find-area.tmpl",
-            domEntry: ".innerContainer"
-        },
-        {
-            path:"./templates/actions.tmpl",
-            domEntry: ".innerContainer"
-        },
-        {
-            path:"./templates/mail-list.tmpl",
-            domEntry: ".innerContainer"
-        },
-        {
-            path:"./templates/compose.tmpl",
-            domEntry: ".innerContainer"
-        },
-        {
-            path:"./templates/mail-viewer.tmpl",
-            domEntry: ".innerContainer"
-        }
-    ];
-
+    var templatesArr = ["./templates/toolbar.tmpl",
+                        "./templates/find-area.tmpl",
+                        "./templates/actions.tmpl",
+                        "./templates/mail-list.tmpl",
+                        "./templates/compose.tmpl",
+                        "./templates/mail-viewer.tmpl"];
     load(0);
 
     function load(i){
 
         if(i < templatesArr.length){
-            $.get(templatesArr[i].path, function(data, textStatus, XMLHttpRequest){
-                $(templatesArr[i].domEntry).append(data);
+            $.get(templatesArr[i], function(data, textStatus, XMLHttpRequest){
+                var template = XMLHttpRequest.responseText;
+                $('.md').append(template);
                 load(i+1);
             });
         }else{
             callback();
         }
     }
+}
+
+
+//------------------------------------------------------
+// switchTheme
+//------------------------------------------------------
+
+function switchTheme(theme) {
+    return $.get("./css/" + theme + ".css", function (_css) {
+        $("theme-css").remove();
+        $('html').removeClass().addClass(theme);
+        $(['<style type="text/css" id="theme-css">', _css, '</style>'].join('')).appendTo('head');
+    });
 }
 
 
@@ -151,7 +144,7 @@ function setDomEvents() {
                 title:"About",
                 classname:"infobox",
                 wrapper: "infobox-wrapper",
-                template:data
+                template:XMLHttpRequest.responseText
             });
         });
 
@@ -164,7 +157,7 @@ function setDomEvents() {
                         title:"Resources",
                         classname:"resources",
                         wrapper: "resources-wrapper",
-                        template:data
+                        template: XMLHttpRequest.responseText
                     });
                 });
             });
@@ -178,7 +171,7 @@ function setDomEvents() {
                 title:"Settings",
                 classname:"settings",
                 wrapper: "settings-wrapper",
-                "template":data
+                template: XMLHttpRequest.responseText
             });
         });
 
@@ -191,7 +184,7 @@ function setDomEvents() {
                         title:"Choose Language",
                         classname:"settings-options",
                         wrapper: "settings-options-wrapper",
-                        template: data
+                        template: XMLHttpRequest.responseText
                     });
                 });
             });
@@ -204,7 +197,13 @@ function setDomEvents() {
                         title:"Choose Theme",
                         classname:"settings-options",
                         wrapper: "settings-options-wrapper",
-                        template: data
+                        template: XMLHttpRequest.responseText,
+                        onRender: function(){
+                            $('.theme-options input').on('change', function() {
+                                var theme = $('input[name=radioTheme]:checked').val();
+                                switchTheme(theme);
+                            });
+                        }
                     });
                 });
             });

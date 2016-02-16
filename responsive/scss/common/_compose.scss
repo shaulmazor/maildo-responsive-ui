@@ -14,7 +14,7 @@
             display: table;
             table-layout: fixed;
 
-            .compose-view-header {
+            &__header {
                 background-color: #333232;
                 height: 45px;
 
@@ -27,7 +27,7 @@
                         left: 2px;
                         width: 48px;
                         height: 48px;
-                        background: url("../images/sprite.png") no-repeat -80px -115px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -80px -115px;
                     }
 
                 }
@@ -42,7 +42,7 @@
                         right: 15px;
                         width: 20px;
                         height: 27px;
-                        background: url("../images/sprite.png") no-repeat -20px -70px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -20px -70px;
 
                     }
                 }

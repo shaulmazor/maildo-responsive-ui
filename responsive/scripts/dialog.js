@@ -35,6 +35,12 @@ var Dialog = function(){
         var dialogInnerContainer = newDialog.find(".dialog-container .dialog-inner-container");
         dialogInnerContainer.html( options.template);
 
+        if(options.onRender){
+            setTimeout(function(){
+                options.onRender();
+            },200);
+        }
+
         clickOut(newDialog);
         onClose(newDialog);
 
@@ -63,6 +69,11 @@ var Dialog = function(){
             var dialogInnerContainer = dialog.find(".dialog-container .dialog-inner-container");
             dialogInnerContainer.html( options.template);
 
+            if(options.onRender){
+                setTimeout(function(){
+                    options.onRender();
+                },200);
+            }
 
             onClose(dialog);
             el.append(dialog);

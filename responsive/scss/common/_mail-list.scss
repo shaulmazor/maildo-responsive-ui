@@ -14,7 +14,7 @@
             table-layout: fixed;
             width: 100%;
             border-top:1px solid #C7C3C3;
-            color:#504F4F;
+            color:$mailColor;
 
             .row {
                 display: table-row;
@@ -39,7 +39,7 @@
                 height: 20px;
                 background-repeat: no-repeat;
                 overflow: hidden;
-                background-image: url("../images/sprite.png");
+                background-image: url("/maildo-responsive-ui/responsive/images/sprite.png");
                 background-size: 400px 400px;
                 background-position: -54px -119px;
                 cursor: pointer;
@@ -86,7 +86,7 @@
                         right: 8px;
                         width: 24px;
                         height: 24px;
-                        background: url("../images/sprite.png") no-repeat -22px -169px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -22px -169px;
                     }
                 }
 
@@ -100,7 +100,7 @@
                         right: 8px;
                         width: 24px;
                         height: 24px;
-                        background: url("../images/sprite.png") no-repeat 0px -169px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat 0px -169px;
                     }
                 }
             }

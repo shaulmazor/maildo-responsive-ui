@@ -9,7 +9,7 @@
         margin:120px 0 25px -570px;
         left: 50%;
 
-        .title {
+        &__title {
             font-size: 33px;
             display: block;
             position: absolute;
@@ -35,7 +35,7 @@
             height: 24px;
             background-repeat: no-repeat;
             overflow: hidden;
-            background-image: url("../images/sprite.png");
+            background-image: url("/maildo-responsive-ui/responsive/images/sprite.png");
             background-size: 400px 400px;
             background-position: -26px -115px;
             cursor: pointer;
@@ -94,7 +94,7 @@
                         left: 2px;
                         width: 8px;
                         height: 21px;
-                        background: url("../images/sprite.png") no-repeat 0 -200px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat 0 -200px;
                         padding-right: 14px;
                     }
                 }
@@ -114,7 +114,7 @@
                         left: 5px;
                         width: 8px;
                         height: 21px;
-                        background: url("../images/sprite.png") no-repeat -38px -200px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -38px -200px;
                         padding-right: 14px;
                     }
                 }
@@ -137,7 +137,7 @@
                         left: 5px;
                         width: 8px;
                         height: 21px;
-                        background: url("../images/sprite.png") no-repeat -26px -222px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -26px -222px;
                         padding-right: 14px;
                     }
                 }
@@ -204,7 +204,7 @@
                 float: left
             }
 
-            .title {
+            &__title {
                 display: inline;
                 position: static;
                 width: inherit;
@@ -268,7 +268,7 @@
                         left: 0;
                         width: 41px;
                         height: 26px;
-                        background: url("../images/sprite.png") no-repeat -68px -48px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -68px -48px;
                     }
                 }
             }
@@ -299,7 +299,7 @@
                         .icon-delete {
                             &:after {
                                 top: -12px;
-                                background: url("../images/sprite.png") no-repeat -18px -200px;
+                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -18px -200px;
                             }
                         }
                     }
@@ -308,7 +308,7 @@
                         .icon-move {
                             &:after {
                                 top: -12px;
-                                background: url("../images/sprite.png") no-repeat -58px -200px;
+                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -58px -200px;
                             }
                         }
                     }
@@ -317,7 +317,7 @@
                         .icon-back {
                             &:after {
                                 top: -12px;
-                                background: url("../images/sprite.png") no-repeat -2px -222px;
+                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -2px -222px;
                             }
                         }
                     }
