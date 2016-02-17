@@ -12,19 +12,19 @@
     }
 
     .settings{
-        .title{
-            font-size:14px;
-            color:black;
-            padding:5px 5px 5px 5px;
-        }
-        .content{
-            font-size:12px;
-            color:gray;
-            padding:5px 5px 5px 7px;
-            width:280px;
-        }
-        .panel{
+
+        &-item{
             padding: 5px 0 0 10px;
+            .title{
+                font-size:14px;
+                padding:5px 5px 5px 5px;
+            }
+            .value{
+                font-size:12px;
+                color:$settingsValueColor;
+                padding:5px 5px 10px 7px;
+                width:280px;
+            }
         }
 
         .split{

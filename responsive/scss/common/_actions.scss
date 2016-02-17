@@ -211,6 +211,7 @@
                 top: inherit;
                 left: inherit;
                 font-size: 24px;
+                margin-left: -24px;
             }
 
             .select-actions {
@@ -265,11 +266,15 @@
                         content: "";
                         position: absolute;
                         top: -15px;
-                        left: 0;
+                        left: -23px;
                         width: 41px;
                         height: 26px;
                         background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -68px -48px;
                     }
+                }
+
+                .icon-text{
+                    display:none;
                 }
             }
 

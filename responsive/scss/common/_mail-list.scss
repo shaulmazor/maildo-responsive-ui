@@ -19,92 +19,92 @@
             .row {
                 display: table-row;
                 line-height: 60px;
-            }
+                font-size: 14px;
 
-            .select-column{
-                display: table-cell;
-                width: 54px;
-                text-align: left;
-                position:relative;
-            }
-
-            .chkbox-select{
-
-                position:absolute;
-                top: 22px;
-                left: 1px;
-                -moz-appearance: none;
-                -webkit-appearance: none;
-                width: 20px;
-                height: 20px;
-                background-repeat: no-repeat;
-                overflow: hidden;
-                background-image: url("/maildo-responsive-ui/responsive/images/sprite.png");
-                background-size: 400px 400px;
-                background-position: -54px -119px;
-                cursor: pointer;
-                -webkit-user-select: none;
-
-                &.checked{
-                    background-position: -54px -139px
+                .select-column{
+                    display: table-cell;
+                    width: 54px;
+                    text-align: left;
+                    position:relative;
                 }
-            }
 
-            .content {
-                display: table-cell;
-                font-size: 16px;
+                .chkbox-select{
 
-                .ellipsis{
-                    text-overflow: ellipsis;
+                    position:absolute;
+                    top: 22px;
+                    left: 1px;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
                     overflow: hidden;
-                    word-wrap: break-word;
-                    white-space: nowrap;
-                    line-height:24px;
-                }
+                    background-image: url("/maildo-responsive-ui/responsive/images/sprite.png");
+                    background-size: 400px 400px;
+                    background-position: -54px -119px;
+                    cursor: pointer;
+                    -webkit-user-select: none;
 
-                .space{
-                    padding-bottom: 6px;
-                }
-
-                .bold{
-                    font-weight: bold;
-                }
-            }
-
-            .info{
-                display: table-cell;
-                width: 70px;
-                text-align: right;
-
-                .star{
-                    position:relative;
-
-                    &:after{
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        right: 8px;
-                        width: 24px;
-                        height: 24px;
-                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -22px -169px;
+                    &.checked{
+                        background-position: -54px -139px
                     }
                 }
 
-                .no-star{
-                    position:relative;
+                .content {
+                    display: table-cell;
 
-                    &:after{
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        right: 8px;
-                        width: 24px;
-                        height: 24px;
-                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat 0px -169px;
+                    .ellipsis{
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        white-space: nowrap;
+                        line-height:24px;
+                    }
+
+                    .space{
+                        padding-bottom: 6px;
+                    }
+
+                    .bold{
+                        font-weight: bold;
+                    }
+                }
+
+                .info{
+                    display: table-cell;
+                    width: 70px;
+                    text-align: right;
+
+                    .star{
+                        position:relative;
+
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 8px;
+                            width: 24px;
+                            height: 24px;
+                            background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -22px -169px;
+                        }
+                    }
+
+                    .no-star{
+                        position:relative;
+
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 8px;
+                            width: 24px;
+                            height: 24px;
+                            background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat 0px -169px;
+                        }
                     }
                 }
             }
-        }
+       }
 
     }
 
@@ -128,32 +128,33 @@
             .mail{
                 .row {
                     line-height: 36px;
-                }
-                .select-column {
-                    width: 45px;
+                    font-size:13px;
 
-                    .chkbox-select {
-                        top: 31px;
-                        left: 12px;
-                        width: 15px;
-                        height: 15px;
-                        background-position: -6px -139px;
+                    .select-column {
+                        width: 45px;
 
-                        &.checked {
-                            background-position: -6px -124px;
+                        .chkbox-select {
+                            top: 31px;
+                            left: 12px;
+                            width: 15px;
+                            height: 15px;
+                            background-position: -6px -139px;
+
+                            &.checked {
+                                background-position: -6px -124px;
+                            }
+                        }
+                    }
+                    .info {
+                        padding-right: 10px;
+                    }
+                    .content {
+                        .ellipsis {
+                            line-height: 21px;
                         }
                     }
                 }
-                .info {
-                    padding-right: 20px;
-                }
-                .content {
-                    font-size: 15px;
 
-                    .ellipsis {
-                        line-height: 21px;
-                    }
-                }
             }
         }
 

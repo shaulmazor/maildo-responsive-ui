@@ -176,7 +176,7 @@ function setDomEvents() {
         });
 
         setTimeout(function(){
-            $(".lang-panel").bind( "click", function() {
+            $(".settings .lang").bind( "click", function() {
 
                 $.get("./templates/dialogs/language-options.tmpl", function(data, textStatus, XMLHttpRequest){
                     dialog.setModalDialog({
@@ -189,7 +189,7 @@ function setDomEvents() {
                 });
             });
 
-            $(".theme-panel").bind( "click", function() {
+            $(".settings .theme").bind( "click", function() {
 
                 $.get("./templates/dialogs/theme-options.tmpl", function(data, textStatus, XMLHttpRequest){
                     dialog.setModalDialog({
