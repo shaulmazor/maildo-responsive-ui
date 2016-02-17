@@ -58,8 +58,7 @@
                 padding: 0;
 
                 .item{
-                    color:white;
-                    font-size:15px;
+                    font-size:14px;
                     display:table-cell;
                     padding-right: 15px;
                     padding-left: 15px;
@@ -126,7 +125,8 @@
             }
 
             .menu {
-                background-color: white;
+                background-color:$menuMobileBackground;
+                color:$menuColor;
                 width: 200px;
                 z-index: 1;
                 -webkit-box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
@@ -170,13 +170,12 @@
                     box-shadow: 9px -4px 21px -8px rgba(0, 0, 0, 0.67);
 
                     .checked {
-                        background-color: #DEDEDE;
+                        background-color: $menuSelectedItemBackground;
                     }
 
                     .item {
                         display: block;
                         line-height: 43px;
-                        color: black;
                         border-bottom: 1px solid #DACFCF;
                         text-align: left;
                         padding-left: 10px;

@@ -8,9 +8,10 @@
         height: 38px;
         margin:120px 0 25px -570px;
         left: 50%;
+        font-size:13px;
 
         &__title {
-            font-size: 33px;
+            font-size: 30px;
             display: block;
             position: absolute;
             width: 100%;
@@ -22,7 +23,6 @@
             background-color: #737373;
             float: right;
             padding: 8px;
-            font-size: 13px;
             color: white;
             border-radius: 5px;
         }
@@ -51,7 +51,6 @@
 
         .select-actions {
             display:none;
-            font-size: 15px;
 
             &.show {
                 display:inline-block;
@@ -210,7 +209,7 @@
                 width: inherit;
                 top: inherit;
                 left: inherit;
-                font-size: 24px;
+                font-size: 22px;
                 margin-left: -24px;
             }
 
