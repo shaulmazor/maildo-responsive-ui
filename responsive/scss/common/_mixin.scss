@@ -1,0 +1,25 @@
+@mixin abs-pos($top, $right, $bottom, $left) {
+  position:absolute;
+  @if $top != 'NaN' {top: $top;}
+  @if $right != 'NaN' {right: $right;}
+  @if $bottom != 'NaN' {bottom: $bottom;}
+  @if $left != 'NaN' {left: $left;}
+}
+
+//-------------------------------------------------------------
+
+@mixin sprite($image-url, $top, $left, $width, $height, $padding, $image-pos){
+
+  @if $image-url == '' {
+    $image-url: "/maildo-responsive-ui/responsive/images/sprite.png";
+  }
+
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  padding: $padding;
+  background: url($image-url) no-repeat $image-pos;
+}
