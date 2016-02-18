@@ -108,7 +108,7 @@ function setDomEvents() {
                 title: "Move to",
                 classname: "folder-list",
                 wrapper: "folder-list-wrapper",
-                template: data
+                template: XMLHttpRequest.responseText
             });
         });
     });
