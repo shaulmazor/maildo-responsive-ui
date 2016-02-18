@@ -17,7 +17,7 @@
             display: table;
             table-layout: fixed;
             width: 100%;
-            color: #504F4F;
+            //color: #504F4F;
 
             .sender {
                 display: table-cell;
@@ -54,7 +54,7 @@
                         }
 
                         .to {
-                            color: gray;
+                            color: $participantsColor;
                         }
 
                         .from {
@@ -118,9 +118,13 @@
                 width:90%;
 
                 .mail-details-wrapper{
+                    color:black;
                     .mail-details{
                         .participants{
                             display: block;
+                            .to{
+                                color:black;
+                            }
                         }
                         .send-time{
                             display: block;
