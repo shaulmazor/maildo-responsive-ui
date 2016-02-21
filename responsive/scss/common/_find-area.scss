@@ -9,12 +9,10 @@
         display:none;
 
         .btn-find{
-            background-color: #198FFF;
+            background-color: $btnFindBackground;
             border: 0;
             border-radius: 4px;
             color: #FFF;
-            line-height: 33px;
-            min-width: 117px;
             padding: 7px 11px 6px 12px;
             font-size: 15px;
         }
@@ -45,12 +43,11 @@
             display: none;
             width: 100%;
             table-layout: fixed;
-            margin-top: 2px;
+            margin-top: 4px;
 
             .btn-find {
                 display: table-cell;
-                width: 63px;
-                min-width: 63px;
+                width: 80px;
                 border-radius: 0;
             }
 
