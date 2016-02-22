@@ -18,22 +18,22 @@
                 line-height: 40px;
                 font-size: 14px;
 
-                .select-column{
+                .select-column {
                     display: table-cell;
                     width: 54px;
                     text-align: left;
-                    position:relative;
-                }
+                    position: relative;
 
-                .chkbox-select{
-                    position:relative;
+                    .chkbox-select {
+                        position: relative;
 
-                    &:after{
-                        @include main-sprite($top:-15px, $width:20px, $height:20px, $padding: 0 14px 0 0, $image-pos:-54px -119px);
-                    }
+                        &:after {
+                            @include main-sprite($top: 25px, $width: 20px, $height: 20px, $padding: 0 14px 0 0, $image-pos: -54px -119px);
+                        }
 
-                    &.checked:after{
-                        @include main-sprite($top:-15px, $width:20px, $height:20px, $padding: 0 14px 0 0, $image-pos:-54px -139px);
+                        &.checked:after {
+                            @include main-sprite($top: 25px, $width: 20px, $height: 20px, $padding: 0 14px 0 0, $image-pos: -54px -139px);
+                        }
                     }
                 }
 
@@ -117,18 +117,18 @@
                     line-height: 36px;
                     font-size:13px;
 
+
                     .select-column {
                         width: 45px;
 
                         .chkbox-select {
-                            top: 31px;
-                            left: 12px;
-                            width: 15px;
-                            height: 15px;
-                            background-position: -6px -139px;
 
-                            &.checked {
-                                background-position: -6px -124px;
+                            &:after {
+                                @include main-sprite($top: 25px, $width: 20px, $height: 20px, $padding: 0 14px 0 0, $image-pos: -54px -119px);
+                            }
+
+                            &.checked:after {
+                                @include main-sprite($top: 25px, $width: 20px, $height: 20px, $padding: 0 14px 0 0, $image-pos: -54px -139px);
                             }
                         }
                     }
