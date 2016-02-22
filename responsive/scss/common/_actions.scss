@@ -25,23 +25,12 @@
         }
 
         .chkbox-select{
-            margin-right: 25px;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            width: 24px;
-            height: 24px;
-            background-repeat: no-repeat;
-            overflow: hidden;
-            background-image: url("/maildo-responsive-ui/responsive/images/sprite.png");
-            background-size: 400px 400px;
-            background-position: -26px -115px;
-            cursor: pointer;
-            -webkit-user-select: none;
-            display: inline-block;
-            @include relative($top: 8px);
+            &:after{
+                @include main-sprite($top:28px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -115px);
+            }
 
-            &.checked{
-                background-position: -26px -139px;
+            &.checked:after{
+                @include main-sprite($top:28px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -139px);
             }
         }
 
