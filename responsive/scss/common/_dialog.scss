@@ -9,18 +9,12 @@
             z-index: 100;
             width: 100%;
             height: 100%;
-            position:absolute;
-            top:0;
-            bottom:0;
-            right:0;
-            left:0;
+            @include absolute($top:0, $right:0, $bottom:0, $left:0);
         }
 
         &-container {
 
-            position: absolute;
-            left: auto;
-            top: auto;
+            @include absolute($top:auto, $left:auto);
             transform: none;
             z-index: 31;
             border: 1px solid #ccc;
@@ -70,13 +64,7 @@
                     position: relative;
 
                     &:after {
-                        content: "";
-                        position: absolute;
-                        top: -6px;
-                        right: 15px;
-                        width: 20px;
-                        height: 27px;
-                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -20px -70px;
+                        @include main-sprite($top:-6px, $right:15px, $width:20px, $height:27px, $image-pos: -20px -70px);
                     }
                 }
             }
@@ -122,11 +110,7 @@
         .dialog {
 
             .dialog-container {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                @include absolute($top: 0, $right:0, $bottom:0, $left:0);
                 background-color: $dialogBackground;
 
                 .dialog-header {
@@ -145,11 +129,7 @@
                 }
 
                 .dialog-container {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
+                    @include absolute($top: 0, $right:0, $bottom:0, $left:0);
                     background-color: $dialogBackground;
                     transform: none;
                 }
