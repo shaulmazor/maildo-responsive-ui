@@ -1,25 +1,57 @@
-@mixin abs-pos($top, $right, $bottom, $left) {
-  position:absolute;
-  @if $top != 'NaN' {top: $top;}
-  @if $right != 'NaN' {right: $right;}
-  @if $bottom != 'NaN' {bottom: $bottom;}
-  @if $left != 'NaN' {left: $left;}
+
+//----------------------------------------------
+//  positions
+//----------------------------------------------
+
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
-//-------------------------------------------------------------
+//----------------------------------------------
 
-@mixin sprite($image-url, $top, $left, $width, $height, $padding, $image-pos){
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
 
-  @if $image-url == '' {
-    $image-url: "/maildo-responsive-ui/responsive/images/sprite.png";
-  }
+//----------------------------------------------
+
+@mixin relative($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+
+//----------------------------------------------
+
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(fixed, $top, $right, $bottom, $left);
+}
+
+
+
+//----------------------------------------------
+// sprite
+//----------------------------------------------
+
+
+@mixin sprite($image-url, $top:null, $left:null, $right:null, $width:null, $height:null, $padding:null, $image-pos:null){
 
   content: "";
   position: absolute;
   top: $top;
   left: $left;
+  right: $right;
   width: $width;
   height: $height;
   padding: $padding;
   background: url($image-url) no-repeat $image-pos;
+}
+
+//----------------------------------------------
+
+@mixin main-sprite($image-url:"/maildo-responsive-ui/responsive/images/sprite.png", $top:null, $left:null, $right:null, $width:null, $height:null, $padding:null, $image-pos:null){
+  @include sprite("/maildo-responsive-ui/responsive/images/sprite.png", $top, $left, $right, $width, $height, $padding, $image-pos);
 }

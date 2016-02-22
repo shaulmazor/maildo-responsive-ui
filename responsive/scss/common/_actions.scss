@@ -4,19 +4,16 @@
         width: 1140px;
         margin: 0 auto;
         padding-top: 100px;
-        position: absolute;
         height: 38px;
         margin:120px 0 25px -570px;
-        left: 50%;
         font-size:13px;
+        @include absolute($left: 50%);
 
         &__title {
             font-size: 30px;
             display: block;
-            position: absolute;
             width: 100%;
-            top: 16px;
-            left: 0;
+            @include absolute($top: 16px, $left: 0);
         }
 
         .btn-compose{
@@ -41,8 +38,7 @@
             cursor: pointer;
             -webkit-user-select: none;
             display: inline-block;
-            position:relative;
-            top:8px;
+            @include relative($top: 8px);
 
             &.checked{
                 background-position: -26px -139px;
@@ -73,9 +69,7 @@
             }
 
             .btn-anchor{
-                position:absolute;
-                bottom:0;
-                left:0;
+                @include absolute($bottom:0, $left: 0);
                 width:0;
                 height:0;
             }
@@ -87,7 +81,7 @@
                     position: relative;
 
                     &:after{
-                        @include sprite("", -15px, 2px, 8px, 21px, 0 0 0 14px, $btn-delete-image-pos);
+                        @include main-sprite($top:-15px, $left:2px, $width:8px, $height:21px, $padding: 0 0 0 14px, $image-pos:$btn-delete-image-pos);
                     }
                 }
             }
@@ -100,7 +94,7 @@
                     position: relative;
 
                     &:after {
-                        @include sprite("", -16px, 5px, 8px, 21px, 0 14px 0 0, $btn-move-image-pos);
+                        @include main-sprite($top:-16px, $left:5px, $width:8px, $height:21px, $padding: 0 14px 0 0, $image-pos:$btn-move-image-pos);
                     }
                 }
             }
@@ -116,7 +110,7 @@
                     position: relative;
 
                     &:after{
-                        @include sprite("", -15px, 5px, 8px, 21px, 0 14px 0 0, $btn-back-image-pos);
+                        @include main-sprite($top:-15px, $left:5px, $width:8px, $height:21px, $padding: 0 14px 0 0, $image-pos:$btn-back-image-pos);
                     }
                 }
             }
@@ -167,13 +161,11 @@
 
     .md{
         .actions {
-            position: absolute;
+            @include absolute($left: 0);
             width: 100%;
             padding-top: 22px;
             text-align: center;
             margin:48px 0 7px 0;
-            left: 0;
-
 
             .chkbox-select {
                 top: 2px;
@@ -192,9 +184,7 @@
             }
 
             .select-actions {
-                position: fixed;
-                bottom: 0;
-                left: 0;
+                @include fixed($bottom:0, $left: 0);
                 width: 100%;
                 z-index: 1;
                 display: none;
@@ -240,7 +230,7 @@
                     position:relative;
 
                     &:after{
-                        @include sprite("", -15px, -23px, 41px, 26px, 0, $btn-compose-image-pos);
+                        @include main-sprite($top:-15px, $left:-23px, $width:41px, $height:26px,$image-pos:$btn-compose-image-pos);
                     }
                 }
 
@@ -274,8 +264,7 @@
                     .btn-delete {
                         .icon-delete {
                             &:after {
-                                top: -12px;
-                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -18px -200px;
+                                @include main-sprite($top:-12px,$image-pos: -18px -200px);
                             }
                         }
                     }
@@ -283,8 +272,7 @@
                     .btn-move {
                         .icon-move {
                             &:after {
-                                top: -12px;
-                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -58px -200px;
+                                @include main-sprite($top:-12px,$image-pos: -58px -200px);
                             }
                         }
                     }
@@ -292,8 +280,7 @@
                     .btn-back {
                         .icon-back {
                             &:after {
-                                top: -12px;
-                                background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -2px -222px;
+                                @include main-sprite($top:-12px,$image-pos: -2px -222px);
                             }
                         }
                     }

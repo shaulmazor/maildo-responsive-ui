@@ -1,15 +1,11 @@
 .md {
 
     .mail-viewer {
+        @include absolute($top:300px, $left:50%);
         display: none;
         width: 1140px;
-        margin: 0 auto;
-        position: absolute;
-        top: 300px;
-        bottom: 0;
         overflow: auto;
         margin-left: -570px;
-        left: 50%;
         border-top: 1px solid gray;
         padding-top: 30px;
 
@@ -17,7 +13,6 @@
             display: table;
             table-layout: fixed;
             width: 100%;
-            //color: #504F4F;
 
             .sender {
                 display: table-cell;
@@ -138,32 +133,25 @@
 
             &__content {
                 border: 0;
-                margin-right: 30px;
-                margin-top: 25px;
-                margin-left: 0;
+                margin:25px 22px 0 0;
                 text-align: center;
 
                 .box {
                     width: 100%;
-                    margin:0px;
-                    margin-bottom: 3px;
+                    margin:  0 0 3px 0;
                 }
             }
         }
 
         &.mail-viewer-mode{
             .mail-viewer {
-                display: block;
-                position: absolute;
+                @include absolute($top:40px, $right:0, $bottom:0, $left:0);
                 width:100%;
-                top: 40px;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
+                display: block;
                 background-color: white;
                 transform: none;
                 margin-left: 0;
-                border-top: 0px;
+                border-top: 0;
                 padding: 10px;
             }
         }
