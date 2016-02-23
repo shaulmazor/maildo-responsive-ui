@@ -219,17 +219,25 @@
                 background: transparent;
                 border: none;
                 -webkit-font-smoothing: antialiased;
-                padding: 18px 0 0 0;
 
                 .icon-compose {
                     display: block;
-                    width: 27px;
+                    width: 30px;
                     padding-right: 0;
                     cursor: pointer;
                     position:relative;
 
                     &:after{
-                        @include main-sprite($top:-15px, $left:-23px, $width:41px, $height:26px,$image-pos:$btn-compose-image-pos);
+
+                        content: "";
+                        position: absolute;
+                        top: -6px;
+                        left: 0px;
+                        width: 30px;
+                        height: 26px;
+                        background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -79px -49px;
+
+                        @include main-sprite($top:-5px, $width:30px, $height:26px,$image-pos:$btn-compose-image-pos);
                     }
                 }
 
