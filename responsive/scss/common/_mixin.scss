@@ -1,7 +1,17 @@
 //----------------------------------------------
-//  positions
+//  size
 //----------------------------------------------
 
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+//----------------------------------------------
+//  positions
+//----------------------------------------------
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
   position: $position;
@@ -34,7 +44,6 @@
 //----------------------------------------------
 // sprite
 //----------------------------------------------
-
 
 @mixin sprite($image-url, $top:null, $left:null, $right:null, $width:null, $height:null, $padding:null, $image-pos:null){
 
