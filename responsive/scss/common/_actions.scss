@@ -25,12 +25,18 @@
         }
 
         .chkbox-select{
+            display: inline-block;
+            width: 24px;
+            height:24px;
+            position: relative;
+            padding-right:26px;
+
             &:after{
-                @include main-sprite($width:24px, $height:24px, $image-pos:-26px -115px); //$top:28px, $left:12px,
+                @include main-sprite($top:6px, $width:24px, $height:24px, $image-pos:-26px -115px);
             }
 
             &.checked:after{
-                @include main-sprite($width:24px, $height:24px, $image-pos:-26px -139px);
+                @include main-sprite($top:6px, $width:24px, $height:24px, $image-pos:-26px -139px);
             }
         }
 
@@ -160,10 +166,10 @@
                 float: left;
 
                 &:after{
-                    @include main-sprite($top:28px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -115px);
+                    @include main-sprite($top:4px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -115px);
                 }
                 &.checked:after{
-                    @include main-sprite($top:28px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -139px);
+                    @include main-sprite($top:4px, $left:12px, $width:24px, $height:24px, $image-pos:-26px -139px);
                 }
             }
 
