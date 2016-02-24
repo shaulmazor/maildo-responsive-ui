@@ -3,28 +3,16 @@
 // loadTemplates
 //------------------------------------------------------
 
-function loadTemplates(callback){
+function loadTemplates(callback) {
 
-    var templatesArr = ["./templates/toolbar.tmpl",
-                        "./templates/find-area.tmpl",
-                        "./templates/actions.tmpl",
-                        "./templates/mail-list.tmpl",
-                        "./templates/compose.tmpl",
-                        "./templates/mail-viewer.tmpl"];
-    load(0);
+    var templatesList= ["toolbar", "find-area", "actions", "mail-list", "compose", "mail-viewer"];
 
-    function load(i){
-
-        if(i < templatesArr.length){
-            $.get(templatesArr[i], function(data, textStatus, XMLHttpRequest){
-                var template = XMLHttpRequest.responseText;
-                $('.md').append(template);
-                load(i+1);
-            });
-        }else{
-            callback();
-        }
+    for (var i = 0; i < templatesList.length; i++) {
+        var name = templatesList[i];
+        $('.md').append(templatesArr[name]);
     }
+
+    callback();
 }
 
 
@@ -102,14 +90,12 @@ function setDomEvents() {
 
     $(".btn-move").bind( "click", function(e) {
 
-        $.get("./templates/dialogs/folder-list.tmpl", function(data, textStatus, XMLHttpRequest) {
-            dialog.setDialog({
-                el: ".btn-move .btn-anchor",
-                title: "Move to",
-                classname: "folder-list",
-                wrapper: "folder-list-wrapper",
-                template: XMLHttpRequest.responseText
-            });
+        dialog.setDialog({
+            el: ".btn-move .btn-anchor",
+            title: "Move to",
+            classname: "folder-list",
+            wrapper: "folder-list-wrapper",
+            template: templatesArr["folder-list"]
         });
     });
 
@@ -138,76 +124,65 @@ function setDomEvents() {
     });
 
     $(".btn-info").bind( "click", function() {
-        $.get("./templates/dialogs/infobox.tmpl", function(data, textStatus, XMLHttpRequest){
-            dialog.setDialog({
-                el:"#md",
-                title:"About",
-                classname:"infobox",
-                wrapper: "infobox-wrapper",
-                template:XMLHttpRequest.responseText
-            });
+        dialog.setDialog({
+            el:"#md",
+            title:"About",
+            classname:"infobox",
+            wrapper: "infobox-wrapper",
+            template: templatesArr["infobox"]
         });
+
 
         setTimeout(function(){
             $(".resources-link").bind( "click", function() {
 
-                $.get("./templates/dialogs/resources.tmpl", function(data, textStatus, XMLHttpRequest){
-                    dialog.setModalDialog({
-                        el: "#md",
-                        title:"Resources",
-                        classname:"resources",
-                        wrapper: "resources-wrapper",
-                        template: XMLHttpRequest.responseText
-                    });
+                dialog.setModalDialog({
+                    el: "#md",
+                    title:"Resources",
+                    classname:"resources",
+                    wrapper: "resources-wrapper",
+                    template: templatesArr["resources"]
                 });
             });
         },500)
     });
 
     $(".btn-settings").bind( "click", function() {
-        $.get("./templates/dialogs/settings.tmpl", function(data, textStatus, XMLHttpRequest){
-            dialog.setDialog({
-                el:"#md",
-                title:"Settings",
-                classname:"settings",
-                wrapper: "settings-wrapper",
-                template: XMLHttpRequest.responseText
-            });
+        dialog.setDialog({
+            el:"#md",
+            title:"Settings",
+            classname:"settings",
+            wrapper: "settings-wrapper",
+            template: templatesArr["settings"]
         });
 
         setTimeout(function(){
             $(".settings .lang").bind( "click", function() {
-
-                $.get("./templates/dialogs/language-options.tmpl", function(data, textStatus, XMLHttpRequest){
-                    dialog.setModalDialog({
-                        el: "#md",
-                        title:"Choose Language",
-                        classname:"settings-options",
-                        wrapper: "settings-options-wrapper",
-                        template: XMLHttpRequest.responseText
-                    });
+                dialog.setModalDialog({
+                    el: "#md",
+                    title:"Choose Language",
+                    classname:"settings-options",
+                    wrapper: "settings-options-wrapper",
+                    template: templateArr["language-options"]
                 });
             });
 
             $(".settings .theme").bind( "click", function() {
 
-                $.get("./templates/dialogs/theme-options.tmpl", function(data, textStatus, XMLHttpRequest){
-                    dialog.setModalDialog({
-                        el: "#md",
-                        title:"Choose Theme",
-                        classname:"settings-options",
-                        wrapper: "settings-options-wrapper",
-                        template: XMLHttpRequest.responseText,
-                        onRender: function(){
-                            $('.theme-options input').on('change', function() {
-                                var theme = $('input[name=radioTheme]:checked').val();
-                                switchTheme(theme);
-                            });
-                        }
-                    });
+                dialog.setModalDialog({
+                    el: "#md",
+                    title:"Choose Theme",
+                    classname:"settings-options",
+                    wrapper: "settings-options-wrapper",
+                    template: templatesArr["theme-options"],
+                    onRender: function(){
+                        $('.theme-options input').on('change', function() {
+                            var theme = $('input[name=radioTheme]:checked').val();
+                            switchTheme(theme);
+                        });
+                    }
                 });
             });
-
         },500);
     });
 

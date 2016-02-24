@@ -60,6 +60,6 @@
 
 //----------------------------------------------
 
-@mixin main-sprite($image-url:"/maildo-responsive-ui/responsive/images/sprite.png", $top:null, $left:null, $right:null, $width:null, $height:null, $padding:null, $image-pos:null){
-  @include sprite("/maildo-responsive-ui/responsive/images/sprite.png", $top, $left, $right, $width, $height, $padding, $image-pos);
+@mixin main-sprite($top:null, $left:null, $right:null, $width:null, $height:null, $padding:null, $image-pos:null){
+  @include sprite("../images/sprite.png", $top, $left, $right, $width, $height, $padding, $image-pos);
 }

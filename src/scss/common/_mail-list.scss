@@ -66,13 +66,7 @@
                         position:relative;
 
                         &:after{
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            right: 0px;
-                            width: 24px;
-                            height: 24px;
-                            background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat -22px -169px;
+                            @include main-sprite($right:0, $width:24px, $height:24px,$image-pos:-22px -169px);
                         }
                     }
 
@@ -80,13 +74,7 @@
                         position:relative;
 
                         &:after{
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            right: 0px;
-                            width: 24px;
-                            height: 24px;
-                            background: url("/maildo-responsive-ui/responsive/images/sprite.png") no-repeat 0px -169px;
+                            @include main-sprite($right:0, $width:24px, $height:24px,$image-pos:0px -169px);
                         }
                     }
                 }

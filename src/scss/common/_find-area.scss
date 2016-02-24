@@ -1,7 +1,6 @@
 .md {
     .find-area{
-        width: 100%;
-        height: 42px;
+        @include size(100%,42px);
         position: fixed;
         top: 59px;
         background-color: #E0E0E0;
@@ -18,8 +17,7 @@
         }
 
         .find-inputText{
-            width: 500px;
-            height: 27px;
+            @include size(500px, 27px);
             margin-top: 5px;
             font-size: 15px;
         }
@@ -53,15 +51,12 @@
 
             .find-inputText {
                 display: table-cell;
-                width: 100%;
-                height: 100%;
                 margin-top: 0;
             }
 
             .find-inputText {
+                @include size(100%);
                 display: table-cell;
-                width: 100%;
-                height: 100%;
                 margin-top: 0;
             }
 

@@ -1,14 +1,12 @@
 var Dialog = function(){
 
-    var template;
+    var template = templatesArr["dialog"];
     var modalMode = false;
 
     //------------------------------------------------------
 
     var init = function(){
-        $.get("./templates/dialog.tmpl", function(data){
-            template = data;
-        });
+
     };
 
     //------------------------------------------------------
