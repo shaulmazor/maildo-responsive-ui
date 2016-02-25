@@ -21,11 +21,9 @@ function loadTemplates(callback) {
 //------------------------------------------------------
 
 function switchTheme(theme) {
-    return $.get("./css/" + theme + ".css", function (_css) {
-        $("theme-css").remove();
-        $('html').removeClass().addClass(theme);
-        $(['<style type="text/css" id="theme-css">', _css, '</style>'].join('')).appendTo('head');
-    });
+
+    $('html').removeClass().addClass(theme);
+    $('#cssSrc').attr('href', 'css/' + theme + ".css");
 }
 
 
